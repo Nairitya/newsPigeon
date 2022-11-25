@@ -29,10 +29,12 @@ export default class Navbar extends Component {
                         >
                             <span className="navbar-toggler-icon"></span>
                         </button>
+
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
+
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li className="nav-item">
-                                    <Link className="nav-link active imp" aria-current="page" to="/">
+                                    <Link className="nav-link   imp" aria-current="page" to="/">
 
                                         Home
                                     </Link>
@@ -81,18 +83,21 @@ export default class Navbar extends Component {
 
 
                             </ul>
+                            {/* <div className="container" style={{ justifyContent: "flex-end", textTransform: "uppercase", }}> */}
+                            <div className={`btn btn-sm btn-${this.props.mode ? "light" : "dark"}`} onClick={this.props.darkModeHandler} > {this.props.mode ? "Disable" : "Enable"} Dark Mode</div>
+                            {/* </div> */}
 
                         </div>
 
                     </div>
-                    <div className="container" style={{ justifyContent: "flex-end", textTransform: "uppercase", }}>
-                        {/* <div className="form-check form-switch">
-                            <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={this.props.darkModeHandler} />
-                            <label style={{ marginLeft: "5px", textDecoration: "underline" }} className="form-check-label" htmlFor="flexSwitchCheckDefault">{this.props.mode ? "Disable" : "Enable"} Dark Mode</label>
-                        </div> */}
-                        <div className={`btn btn-sm btn-${this.props.mode ? "light" : "dark"}`} onClick={this.props.darkModeHandler} > {this.props.mode ? "Disable" : "Enable"} Dark Mode</div>
 
-                    </div>
+                    {/* <div className="form-check form-switch">
+                        <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={this.props.darkModeHandler} />
+                        <label style={{ marginLeft: "5px", textDecoration: "underline" }} className="form-check-label" htmlFor="flexSwitchCheckDefault">{this.props.mode ? "Disable" : "Enable"} Dark Mode</label>
+                    </div> */}
+
+
+
                 </nav >
             </>
         );

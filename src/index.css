@@ -10,9 +10,9 @@ body {
 ::before {
   box-sizing: inherit;
 }
-.custom {
+/* .custom {
   padding: 0 100px;
-}
+} */
 :root {
   --background: #000;
   --text: #fff;
@@ -29,7 +29,7 @@ ul a {
   text-transform: uppercase;
   text-decoration: none;
 }
-ul a:before {
+/* ul a:before {
   position: absolute;
   bottom: -2px;
   content: "";
@@ -43,7 +43,7 @@ ul a:hover:before {
   opacity: 1;
   transition: 0.5s transform ease, 0.8s opacity ease;
   transform: translateX(0);
-}
+} */
 ul .active {
   color: var(--highlight);
 }
@@ -51,11 +51,20 @@ ul .active:hover:before {
   opacity: 0;
 }
 
+ul a:hover {
+  border: 2px solid var(--highlight);
+  border-radius: 999px;
+}
+ul a {
+  border: 2px solid transparent;
+  border-radius: 999px;
+}
+
 .sourceBadge {
   box-sizing: border-box;
   position: absolute;
   border-radius: 0 999px 999px 0;
-  padding: 10px 15px 10px 10px;
+  padding: 1% 2% 1% 1%;
   font-size: small;
   font-weight: 600;
   border-left: none;
